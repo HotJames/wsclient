@@ -1,4 +1,4 @@
-package wsclient
+package wsserver
 
 const (
 	REQUEST_TYPE = iota
@@ -27,14 +27,5 @@ type WsResult struct {
 
 	Status int
 	Msg    string
-}
-
-func NewCommand(name string, data interface{}) *WsCommand {
-
-	return &WsCommand{
-
-		Type:    REQUEST_TYPE,
-		Command: name,
-		Data:    data,
-	}
+	Data   interface{}
 }
